@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/resources/img/favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript" src="resources/script/lib/js-yaml-min.js"></script>
+    <script type="text/javascript" src="resources/script/lib/micromodal.min.js"></script>
+    <link rel="stylesheet" href="resources/style/lib/micromodal.css">
+    <script type="text/javascript" src="resources/script/lib/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="resources/script/userscript.js"></script>
+    <script type="text/javascript" src="resources/script/yeah-i-use-java.js"></script>
+    <script type="text/javascript" src="resources/script/date.js"></script>
+    <script type="text/javascript" src="resources/script/rule.js"></script>
+    <script type="text/javascript" src="resources/script/time.js"></script>
+    <script type="text/javascript" src="resources/script/parse.js"></script>
+    <script type="text/javascript" src="resources/script/setup.js"></script>
+    <script type="text/javascript" src="resources/script/style.js"></script>
+
+
+    <link id="main_style" rel="stylesheet" href="resources/style/default.css">
+
+    <title>Timer</title>
+</head>
+<body>
+<div id="settings">
+    <a href="" id="settingsIcon" data-micromodal-trigger="modal-1" onclick="">
+        <img width="48px" height="48px" src="./resources/img/settings.png" alt="Settings"/>
+    </a>
+</div>
+<section class="countdown-container">
+    <div id="countdown" class="countdown"></div>
+    <div id="event"></div>
+    <div id="time">
+        <div id="current_time"></div>
+        <div id="event_time"></div>
+    </div>
+</section>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="settings_overlay" tabindex="-1" data-micromodal-close>
+        <div class="settings_container" role="dialog" aria-modal="true" aria-labelledby="settings_title">
+            <header class="modal__header">
+                <h1 class="modal__title" id="settings_title">Options</h1>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="settings_dialog_content">
+                <h3>Schedule</h3>
+                <label for="school_select">School</label>
+                <select id="school_select"></select>
+                <br>
+                <label for="schedule_select">Schedule</label>
+                <select id="schedule_select"></select>
+                <h3>Customization</h3>
+                <a href="style">Manage Stylesheets (Themes)</a>
+                <br>
+                <a href="script">Manage Scripts (Extensions)</a>
+                <br>
+                <label for="use_hms">Short time (<span class="countdown">1H 2M 3S</span>)</label>
+                <input id="use_hms" type="checkbox">
+                <br>
+                <label for="css_overwrite">Remove default stylesheet</label>
+                <input id="css_overwrite" type="checkbox">
+                <br>
+                <br>
+                <a href="https://discord.gg/7jjqMqsy8D">join the discord lol</a>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
