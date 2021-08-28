@@ -23,24 +23,24 @@ function prettyPrintDiff(diff, long) {
     if(diff.days) {
         result += diff.days;
         if(long) result += " Days ";
-        else result += "D "
+        else result += "d "
     }
 
     if(diff.hours) {
         result += diff.hours;
         if(long) result += " Hours ";
-        else result += "H "
+        else result += "h "
     }
 
     if(diff.minutes) {
         result += diff.minutes;
         if(long) result += " Minutes ";
-        else result += "M "
+        else result += "m "
     }
 
     result += diff.seconds;
     if(long) result += " Seconds";
-    else result += "S";
+    else result += "s";
 
     return result;
 }
